@@ -1,0 +1,8 @@
+#!/bin/bash
+
+set -e
+
+export ROOTDIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )/.." && pwd )"
+. $ROOTDIR/script/ensure-go-installed.sh
+
+exec "$(basename $0)" "$@"

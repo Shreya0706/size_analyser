@@ -1,0 +1,12 @@
+#!/bin/bash
+
+set -e
+
+cd "$(dirname "$0")/.."
+
+export ROOTDIR="$(pwd)"
+
+if [[ "$(uname -s)" = "Darwin" ]]; then
+    brew bundle
+fi
+. script/ensure-go-installed.sh
